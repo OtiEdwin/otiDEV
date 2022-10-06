@@ -8,14 +8,12 @@ let test = document.getElementById('test'),
 
 let textArr = [ text1, text2, text3, text4, text5 ],
     i = 0, 
-    j = 0
-
+    j = -1
 function changeText(){
     const interval_id = setInterval(() => {
         let text_1 = textArr[ j % textArr.length ],
             text_2 = textArr[ (j+1) % textArr.length ],
             total_length = text_1.length + text_2.length;
-            console.log('total length is:', total_length)
 
         if (i < total_length){
             if (i < text_1.length) {
@@ -31,12 +29,7 @@ function changeText(){
     if(document.hidden){clearInterval(interval_id); j--}
     i = 0; j++
 }
-setInterval( changeText, 8000 );
-
-
-
-
-
+setInterval( changeText, 9000 );
 
 
 function contentChange( content, depthTrace, coordinates ){
@@ -91,7 +84,8 @@ function Path( trace, coordinates, location ) {
 
 function windowHandler( window_init, action, display_state ) {
     let window = document.getElementById(window_init),
-        path = document.getElementById('path')
+        path = document.getElementById('path'),
+        expanded = document.getElementsByClassName("expanded")
 
     if (display_state == false){
         window.style = 'display : none'
@@ -100,10 +94,15 @@ function windowHandler( window_init, action, display_state ) {
     else{
         window.style = 'display : initial'
         if (action == 'expand'){
+            expanded[0].innerHTML = ` &boxbox; `
+            expanded[1].innerHTML = ` &boxbox; `
             window.style.width = '100%'
             window.style.height = '100%'
+            
         }
         if (action == 'shrink'){
+            expanded[0].innerHTML = ` &EmptySmallSquare; `
+            expanded[1].innerHTML = ` &EmptySmallSquare; `
             if ( window_init === 'file'){
                 window.style.width = '50rem'
                 window.style.height = '40rem'                

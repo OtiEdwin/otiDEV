@@ -24,107 +24,11 @@
                     <h4>My Projects</h4>        
                 </div>            
             </div>
-            <div class="head"></div>
-            <div id="file" class="window" style="display: none;">
-                <div class="window-panel">
-                    <div class="window-panel_sub">
-                        <div class="path-box">Projects : </div>
-                        <div id="path">
-                            
-                        </div>
-                    </div>
-                    <div class="window-panel_sub flex">
-                        <div class="panel-box" style="font-size: 1.5rem;" onclick = "windowHandler('file', 'shrink', true)">-</div>
-                        <div class="panel-box" onclick = "windowHandler('file', 'expand', true)">&boxbox;</div>
-                        <div class="panel-box close" style="font-size: 2rem;" onclick = "windowHandler('file', ' ', false)">&times;</div>
-                    </div>
-                </div>
-                <div class="main-content">
-                    <div class="main-content_nav">
-                        <ul>
-                            <li onclick="contentChange( 'categories', 'd0', [0] )">Categories</li>
-                            <li onclick="contentChange( 'all', 'd0', [1] )">All Projects</li>
-                        </ul>
-                    </div>
-                    <div id="content" class="main-content_content">
-                        <div id="projects" name ='Projects' class="folders row">
-                            <div class="folder" onclick="contentChange( 'categories', 'd0', [0] )">
-                                <img src="./assets/folder.svg" class="folder-folder" alt="folder">
-                                <p>Categories</p>        
-                            </div>
-                            <div class="folder" onclick="contentChange( 'all', 'd0', [1] )">
-                                <img src="./assets/folder.svg" class="folder-folder" alt="folder">
-                                <p>All</p>        
-                            </div>
-                        </div>
-                        <div id="categories" name ='Categories' class="folders row" style="display: none;">
-                            <div class="folder" onclick="contentChange('web-apps', 'd0', [0,0])">
-                                <img src="./assets/folder.svg" class="folder-folder" alt="folder">
-                                <p>Web Apps</p>        
-                            </div>
-                            <div class="folder" onclick="contentChange('mobile-apps', 'd0', [0,1])">
-                                <img src="./assets/folder.svg" class="folder-folder" alt="folder">
-                                <p>Mobile Apps</p>        
-                            </div>
-                            <div class="folder" onclick="contentChange('all', 'd0', [0,2])">
-                                <img src="./assets/folder.svg" class="folder-folder" alt="folder">
-                                <p>All Projects</p>        
-                            </div>
-                        </div>
-                        <div id="web-apps" name = 'Web Apps' class="folders row" style="display: none;">
-                            <div class="app-folder">
-                                <img src="./assets/webapp.png" class="folder-img" alt="folder">
-                                <p>Spry Anonymous</p>        
-                            </div>
-                            <div class="app-folder">
-                                <img src="./assets/webapp.png" class="folder-img" alt="folder">
-                                <p>CBYM News Platform</p>        
-                            </div>
-                        </div>
-                        <div id="mobile-apps" name = 'Mobile Apps' class="folders row" style="display: none;">
-                            <div class="app-folder">
-                                <img src="./assets/mobile apps.png" class="folder-img" alt="folder">
-                                <p>ReferMe</p>        
-                            </div>
-                        </div>
-                        <div id="all" name = 'All' class="folders row" style="display: none;">
-                            <div class="app-folder">
-                                <img src="./assets/webapp.png" class="folder-img" alt="folder">
-                                <p>Spry Anonymous</p>        
-                            </div>
-                            <div class="app-folder">
-                                <img src="./assets/webapp.png" class="folder-img" alt="folder">
-                                <p>CBYM News Platform</p>        
-                            </div>
-                            <div class="app-folder">
-                                <img src="./assets/mobile apps.png" class="folder-img" alt="folder">
-                                <p>ReferMe</p>        
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> 
+            <div class="head"></div> 
             <div class="desktop absolute flex">
                 <p><span id="test" class="h3">Hello World</span><span class="cursor h3"> _</span></p>                 
             </div>            
         </section>
-        <footer class="footer">
-            <!-- <div class="toggler">
-                <div class="slim"></div>
-                <div class="slim"></div>
-                <div class="slim"></div>
-            </div> -->
-            <!-- <div class="socials flex">
-                <ul class='flex row'>
-                    <li><img src="./assets/facebook.png" name="logo-facebook" class='icon'></li>
-                    <li><img src="./assets/instagram.png" name="logo-instagram" class='icon'></li>
-                    <li><img src="./assets/twitter.png" name="logo-twitter" class='icon'></li>
-                    <li><img src="./assets/whatsapp.png" name="logo-whatsapp" class='icon'></li>
-                    <li><img src="./assets/linkedin.png" name="logo-linkedin" class='icon'></li>
-                </ul>
-            </div> -->
-            <!-- <div class="copyright"> Copyright NXThub &mdash; &copy;</div> -->
-        </footer>
 
         <!-- ABOUT SECTION -->
 
@@ -134,8 +38,8 @@
                     <div class="path-box">About Me</div>
                 </div>
                 <div class="window-panel_sub flex">
-                    <div class="panel-box" style="font-size: 1.5rem;" onclick = "windowHandler('about', 'shrink', true)">-</div>
-                    <div class="panel-box" onclick = "windowHandler('about', 'expand', true)">&boxbox;</div>
+                    <div class="panel-box" style="font-size: 1rem;" onclick = "windowHandler('about', 'shrink', true)">&boxh;</div>
+                    <div class="panel-box expanded" style="font-size: 1.3rem;" onclick = "windowHandler('about', 'expand', true)">&EmptySmallSquare;</div>
                     <div class="panel-box close" style="font-size: 2rem;" onclick = "windowHandler('about', '', false)">&times;</div>
                 </div>
             </div>
@@ -152,9 +56,6 @@
                         colors="primary:#ffffff"
                         style="width:35px;height:35px">
                         </lord-icon>
-                        <!-- <span class="material-symbols-filled">
-                            verified
-                        </span> -->
                     </h1>
 
                     <h3 class="heading-sub">Web developer/Graphics designer &mdash; full stack</h3>
@@ -352,13 +253,88 @@
                         <span>Whatsapp</span>
                     </div>
                 </div>
-                <!-- <ul class='flex row'>
-                    <li><img src="./assets/facebook.png" name="logo-facebook" class='icon'></li>
-                    <li><img src="./assets/instagram.png" name="logo-instagram" class='icon'></li>
-                    <li><img src="./assets/twitter.png" name="logo-twitter" class='icon'></li>
-                    <li><img src="./assets/whatsapp.png" name="logo-whatsapp" class='icon'></li>
-                    <li><img src="./assets/linkedin.png" name="logo-linkedin" class='icon'></li>
-                </ul> -->
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+
+        <section id="file" class="window" style="display: none;">
+            <div class="window-panel">
+                <div class="window-panel_sub">
+                    <div class="path-box">Projects : </div>
+                    <div id="path">
+                        
+                    </div>
+                </div>
+                <div class="window-panel_sub flex">
+                    <div class="panel-box" style="font-size: 1.5rem;" onclick = "windowHandler('file', 'shrink', true)">&boxh;</div>
+                    <div class="panel-box expanded" style="font-size: 1.3rem;" onclick = "windowHandler('file', 'expand', true)">&EmptySmallSquare;</div>
+                    <div class="panel-box close" style="font-size: 2rem;" onclick = "windowHandler('file', ' ', false)">&times;</div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="main-content_nav">
+                    <ul>
+                        <li onclick="contentChange( 'categories', 'd0', [0] )">Categories</li>
+                        <li onclick="contentChange( 'all', 'd0', [1] )">All Projects</li>
+                    </ul>
+                </div>
+                <div id="content" class="main-content_content">
+                    <div id="projects" name ='Projects' class="folders row">
+                        <div class="folder" onclick="contentChange( 'categories', 'd0', [0] )">
+                            <img src="./assets/folder.svg" class="folder-folder" alt="folder">
+                            <p>Categories</p>        
+                        </div>
+                        <div class="folder" onclick="contentChange( 'all', 'd0', [1] )">
+                            <img src="./assets/folder.svg" class="folder-folder" alt="folder">
+                            <p>All</p>        
+                        </div>
+                    </div>
+                    <div id="categories" name ='Categories' class="folders row" style="display: none;">
+                        <div class="folder" onclick="contentChange('web-apps', 'd0', [0,0])">
+                            <img src="./assets/folder.svg" class="folder-folder" alt="folder">
+                            <p>Web Apps</p>        
+                        </div>
+                        <div class="folder" onclick="contentChange('mobile-apps', 'd0', [0,1])">
+                            <img src="./assets/folder.svg" class="folder-folder" alt="folder">
+                            <p>Mobile Apps</p>        
+                        </div>
+                        <div class="folder" onclick="contentChange('all', 'd0', [0,2])">
+                            <img src="./assets/folder.svg" class="folder-folder" alt="folder">
+                            <p>All Projects</p>        
+                        </div>
+                    </div>
+                    <div id="web-apps" name = 'Web Apps' class="folders row" style="display: none;">
+                        <div class="app-folder">
+                            <img src="./assets/webapp.png" class="folder-img" alt="folder">
+                            <p>Spry Anonymous</p>        
+                        </div>
+                        <div class="app-folder">
+                            <img src="./assets/webapp.png" class="folder-img" alt="folder">
+                            <p>CBYM News Platform</p>        
+                        </div>
+                    </div>
+                    <div id="mobile-apps" name = 'Mobile Apps' class="folders row" style="display: none;">
+                        <div class="app-folder">
+                            <img src="./assets/mobile apps.png" class="folder-img" alt="folder">
+                            <p>ReferMe</p>        
+                        </div>
+                    </div>
+                    <div id="all" name = 'All' class="folders row" style="display: none;">
+                        <div class="app-folder">
+                            <img src="./assets/webapp.png" class="folder-img" alt="folder">
+                            <p>Spry Anonymous</p>        
+                        </div>
+                        <div class="app-folder">
+                            <img src="./assets/webapp.png" class="folder-img" alt="folder">
+                            <p>CBYM News Platform</p>        
+                        </div>
+                        <div class="app-folder">
+                            <img src="./assets/mobile apps.png" class="folder-img" alt="folder">
+                            <p>ReferMe</p>        
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -366,13 +342,13 @@
 
         <div class="absolute circle_box-15 first-1">
             <svg class = " absolute circle top">
-                <circle class = "circle-path circle-1" fill='none'/>
+                <circle class = "circle-path circle-1" fill='none' cx= "50%" cy= "50%" r= "40%"/>
             </svg>    
             <svg class = " absolute circle middle">
-                <circle class = "circle-path circle-2" fill='none'/>
+                <circle class = "circle-path circle-2" fill='none' cx= "50%" cy= "50%" r= "30%"/>
             </svg>
             <svg class = " absolute circle base">
-                <circle class = "circle-path circle-3" fill='none'/>
+                <circle class = "circle-path circle-3" fill='none' cx= "50%" cy= "50%" r= "20%"/>
             </svg>        
         </div>
 
@@ -382,18 +358,28 @@
             <img src="./assets/backrdound1.png" alt="background image" class="background-img">
         </div>
         <div class="absolute c1">
-            <img src="./assets/code.png" alt="code">
+            <div class="slider">
+                <img src="./assets/code2.png" alt="code">
+                <img src="./assets/desgn.png" alt="code">
+                <img src="./assets/ot.png" alt="code">
+            </div>
         </div>
         <div class="absolute l1">
-            <img src="./assets/left.png" alt="background image">
+            <img src="./assets/cloud.png" alt="background image">
         </div>
+        <!-- <div class="absolute l2">
+            <img src="./assets/left1.png" alt="background image">
+        </div> -->
         <div class="absolute r1">
-            <img src="./assets/right.png" alt="background image">
+            <img src="./assets/cloud1.png" alt="background image">
+        </div>
+        <div class="absolute r2">
+            <!-- <img src="./assets/rght.png" alt="background image"> -->
         </div>
 
         <!-- MY SIGNATURE -->
 
-        <svg id="signature" class="absolute" viewbox=" 0 0 5000 5000" width="20rem" height="15rem">
+        <svg id="signature" class="absolute responsive" viewbox=" 0 0 5000 5000" width="20rem" height="15rem">
             <defs>
                 <style type="text/css">
                     #signature{
