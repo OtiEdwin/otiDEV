@@ -263,20 +263,23 @@
                 <div class="window-panel_sub">
                     <div class="path-box">Projects : </div>
                     <div id="path">
-                        
+                        <!-- path goes here -->
                     </div>
                 </div>
                 <div class="window-panel_sub flex">
-                    <div class="panel-box" style="font-size: 1.5rem;" onclick = "windowHandler('file', 'shrink', true)">&boxh;</div>
+                    <div class="panel-box" style="font-size: 1rem;" onclick = "windowHandler('file', 'shrink', true)">&boxh;</div>
                     <div class="panel-box expanded" style="font-size: 1.3rem;" onclick = "windowHandler('file', 'expand', true)">&EmptySmallSquare;</div>
                     <div class="panel-box close" style="font-size: 2rem;" onclick = "windowHandler('file', ' ', false)">&times;</div>
                 </div>
             </div>
+
+            <!-- the fle manager -->
+
             <div class="main-content">
                 <div class="main-content_nav">
                     <ul>
                         <li onclick="contentChange( 'categories', 'd0', [0] )">Categories</li>
-                        <li onclick="contentChange( 'all', 'd0', [1] )">All Projects</li>
+                        <li onclick="contentChange( 'all', 'd0', [1] )">All</li>
                     </ul>
                 </div>
                 <div id="content" class="main-content_content">
@@ -301,7 +304,7 @@
                         </div>
                         <div class="folder" onclick="contentChange('all', 'd0', [0,2])">
                             <img src="./assets/folder.svg" class="folder-folder" alt="folder">
-                            <p>All Projects</p>        
+                            <p>All</p>        
                         </div>
                     </div>
                     <div id="web-apps" name = 'Web Apps' class="folders row" style="display: none;">
@@ -349,7 +352,25 @@
             </svg>
             <svg class = " absolute circle base">
                 <circle class = "circle-path circle-3" fill='none' cx= "50%" cy= "50%" r= "20%"/>
-            </svg>        
+            </svg>       
+        </div>
+
+        <div class="absolute circle_box-250 first-1">
+            <svg class = " absolute circle top">
+                <circle class = "circle-path circle-1" fill='none' cx= "50%" cy= "50%" r= "40%"/>
+            </svg>    
+            <svg class = " absolute circle middle">
+                <circle class = "circle-path circle-2" fill='none' cx= "50%" cy= "50%" r= "30%"/>
+            </svg>
+            <svg class = " absolute circle base">
+                <circle class = "circle-path circle-3" fill='none' cx= "50%" cy= "50%" r= "20%"/>
+            </svg>   
+            <svg class = " absolute circle base">
+                <circle class = "circle-path circle-2" fill='none' cx= "50%" cy= "50%" r= "50%"/>
+            </svg>   
+            <!-- <svg class = " absolute circle base">
+                <circle class = "circle-path circle-3" fill='none' cx= "50%" cy= "50%" r= "60%"/>
+            </svg>      -->
         </div>
 
         <!-- ALL BACKGROUND iMAGES -->
@@ -364,13 +385,10 @@
                 <img src="./assets/ot.png" alt="code">
             </div>
         </div>
-        <div class="absolute l1">
+        <div class="absolute l1 shadow">
             <img src="./assets/cloud.png" alt="background image">
         </div>
-        <!-- <div class="absolute l2">
-            <img src="./assets/left1.png" alt="background image">
-        </div> -->
-        <div class="absolute r1">
+        <div class="absolute r1 shadow">
             <img src="./assets/cloud1.png" alt="background image">
         </div>
         <div class="absolute r2">

@@ -31,6 +31,29 @@ function changeText(){
 }
 setInterval( changeText, 9000 );
 
+// TO CHANGE THE PATH DSPLAY
+
+function Path( trace, coordinates, location ) {
+    let i = 0
+    function pathTracer ( a, b ){
+        let base = a;
+        if( i < b.length ){
+            let div = document.createElement('div')
+            div.className = "path-box"
+            // div.onClick = "contentChange('location[base][ b[i] ]', d0, [])"
+            let inner = document.createTextNode( `${location[base][ b[i] ]} ||`)
+            div.appendChild(inner)
+            path.appendChild(div)
+
+            let new_base = `${base}${ b[i] }`
+            i++
+            pathTracer( new_base, b )        
+        }
+    }
+    pathTracer( trace, coordinates )    
+}
+
+// TO CHANGE THE WNDOW CONTENT DSPLAY
 
 function contentChange( content, depthTrace, coordinates ){
     let a = document.getElementById('categories'),
@@ -63,24 +86,6 @@ function contentChange( content, depthTrace, coordinates ){
     }
 }
 
-function Path( trace, coordinates, location ) {
-    let i = 0
-    function pathTracer ( a, b ){
-        let base = a;
-        if( i < b.length ){
-            let div = document.createElement('div')
-            div.className = "path-box"
-            let inner = document.createTextNode( `${location[base][ b[i] ]}||`)
-            div.appendChild(inner)
-            path.appendChild(div)
-
-            let new_base = `${base}${ b[i] }`
-            i++
-            pathTracer( new_base, b )        
-        }
-    }
-    pathTracer( trace, coordinates )    
-}
 
 function windowHandler( window_init, action, display_state ) {
     let window = document.getElementById(window_init),

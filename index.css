@@ -14,7 +14,7 @@ body{
     /* font-family: 'Lexend Deca', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
     /* font-family: 'Courier New', Courier, monospace; */
     /* font-family: 'Comfortaa', cursive; */
-    font-family: 'Lexend Deca', sans-serif;
+    /* font-family: 'Lexend Deca', sans-serif; */
     font-family: 'Comfortaa',  'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     /* font-family: 'PT Mono', monospace; */
     display: flex;
@@ -323,6 +323,7 @@ footer li a{
     text-align: center;
     transition: all .3s;
 }
+
 .panel-box{
     height: 100%;
     width: 2.5rem;
@@ -332,7 +333,7 @@ footer li a{
     text-align: center;
     transition: all .3s;
 }
-.panel-box:hover, .path-box:hover{
+.panel-box:hover{
     background-color: #2b2b2b;
 }
 .close:hover{
@@ -591,8 +592,20 @@ footer li a{
     animation: blink 1.5s infinite linear;
 }
 
+.shadow{
+    filter: drop-shadow(2px 4px 6px lightblue);
+}
+.blur{
+    filter: blur(5px);
 
-
+}
+.circle_box-250{
+    height: 15rem;
+    width: 250rem;
+    overflow: visible;
+    z-index: -2;
+    /* filter: url(#drop-shadow); */
+}
 .circle_box-50{
     height: 50rem;
     width: 50rem;
@@ -665,8 +678,8 @@ footer li a{
     transform: translate(-50%, -50%);
 }
 .c1{
-    height: 10rem;
-    width: 24rem;
+    height: 11rem;
+    width: 26rem;
     display: flex;
     overflow-x: hidden;
 }
@@ -675,7 +688,7 @@ footer li a{
     animation: slide 10s infinite linear;
 }
 .c1 img{
-    width: 20rem;
+    width: 22rem;
     margin: 0rem 2rem;
 }
 .l1{
@@ -710,6 +723,7 @@ footer li a{
     display: flex;
     justify-content: center;
     margin: auto;
+    padding: 0 0 5rem;
     color: black;
 }
 .wrapper .wrapper-button{
@@ -945,18 +959,18 @@ footer li a{
         transform:translateX(0rem)
     }
     35%{
-        transform:translateX(-24rem)
+        transform:translateX(-26rem)
     }
 
     60%{
-        transform:translateX(-24rem)
+        transform:translateX(-26rem)
     }
     65%{
-        transform:translateX(-48rem)
+        transform:translateX(-52rem)
     }
 
     90%{
-        transform:translateX(-48rem)
+        transform:translateX(-52rem)
     }
     95%{
         transform:translateX(0rem)
