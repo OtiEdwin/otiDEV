@@ -16,17 +16,28 @@
         <section class="main relative">
             <div class="folders absolute">
                 <div class="folder" onclick="windowHandler('about', '', true)">
-                    <img src="./assets/user.svg" class="folder-folder" alt="folder">
-                    <h4>About me</h4>        
+                    <img id="image" src="./assets/about-d.png" class="folder-folder" alt="folder">
+                    <h4 class = "secondary" >About me</h4>        
                 </div>
                 <div class="folder" onclick="windowHandler('file', '', true)">
                     <img src="./assets/folder.svg" class="folder-folder" alt="folder">
-                    <h4>My Projects</h4>        
+                    <h4 class = "secondary" >My Projects</h4>        
                 </div>            
             </div>
-            <div class="head"></div> 
+            <div class="head"></div>
+            <div class="absolute switch">
+                <div class="checkbox relative">
+                    <input type="checkbox" name="switch" id="switch" style="display: none;" >
+                    <img src="./assets/sun.png" class="absolute sm l">
+                    <img src="./assets/moon.png" class="absolute sm r">
+                    <label for="switch" class="toggle" id="toggle">
+                        <div class="ball">
+                        </div>
+                    </label> 
+                </div>                
+            </div>
             <div class="desktop absolute flex">
-                <p><span id="test" class="h3">Hello World</span><span class="cursor h3"> _</span></p>                 
+                <p><span id="test" class="h3 primary">Hello World</span><span class="cursor h3 primary">_</span></p>                 
             </div>            
         </section>
 
@@ -73,7 +84,7 @@
                         <img src="./assets/reaxt.png" alt="React">
                     </div>
                     <div class="stack-description">
-                        <h4>React JS</h4>
+                        <h4 class = "secondary" >React JS</h4>
                     </div>
                 </div>
                 <div class="stack-card next">
@@ -81,7 +92,7 @@
                         <img src="./assets/next.png" alt="Next">
                     </div>
                     <div class="stack-description">
-                        <h4>Next JS</h4>
+                        <h4 class = "secondary" >Next JS</h4>
                     </div>
                 </div>
                 <div class="stack-card node">
@@ -89,7 +100,7 @@
                         <img src="./assets/node.png" alt="">
                     </div>
                     <div class="stack-description">
-                        <h4>Node JS</h4>
+                        <h4 class = "secondary" >Node JS</h4>
                     </div>
                 </div>
                 <div class="stack-card mongo">
@@ -97,7 +108,7 @@
                         <img src="./assets/mongo.png" alt="">
                     </div>
                     <div class="stack-description">
-                        <h4>MongoDB</h4>
+                        <h4 class = "secondary" >MongoDB</h4>
                     </div>
                 </div>
             </div>

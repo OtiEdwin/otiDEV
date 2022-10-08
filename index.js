@@ -120,6 +120,30 @@ function windowHandler( window_init, action, display_state ) {
     }
 }
 
+let dark_mode = true // default color mode
+
+function changeColorMode() {
+    dark_mode = !dark_mode // reverse the boolean
+    let all_text_array = document.getElementsByTagName('h4')  // get all texts on page
+    let about_image = document.getElementById('image')
+
+    // set the color...dar for true and light for false
+    for (let index = 0; index < all_text_array.length; index++) {
+        all_text_array[index].className = dark_mode? 'secondary' : 'primary' //fucng love ternary
+    }
+    // set body color
+    document.body.style = dark_mode?
+    ' background-color: black; background-image: url(./assets/left.png) ' 
+    : 
+    ' background-color: white; background-image: url(./assets/left1.png) '
+    // set about jpeg
+    about_image.src = dark_mode? './assets/about-d.png' : './assets/about.png'
+
+}
+let color_toggle = document.getElementById('toggle')
+
+color_toggle.addEventListener('click', changeColorMode)
+
 
 // function closure(){
 //     let count = 0;
