@@ -9,6 +9,7 @@ let test = document.getElementById('test'),
 let textArr = [ text1, text2, text3, text4, text5 ],
     i = 0, 
     j = -1
+    
 function changeText(){
     const interval_id = setInterval(() => {
         let text_1 = textArr[ j % textArr.length ],
@@ -31,7 +32,7 @@ function changeText(){
 }
 setInterval( changeText, 9000 );
 
-// TO CHANGE THE PATH DSPLAY
+// TO CHANGE THE PATH DISPLAY
 
 function Path( trace, coordinates, location ) {
     let i = 0
@@ -53,7 +54,7 @@ function Path( trace, coordinates, location ) {
     pathTracer( trace, coordinates )    
 }
 
-// TO CHANGE THE WNDOW CONTENT DSPLAY
+// TO CHANGE THE WiNDOW CONTENT DiSPLAY
 
 function contentChange( content, depthTrace, coordinates ){
     let a = document.getElementById('categories'),
@@ -93,24 +94,22 @@ function windowHandler( window_init, action, display_state ) {
         expanded = document.getElementsByClassName("expanded")
 
     if (display_state == false){
-        window.style = 'display : none'
+        window.classList.add('none') = ''
         path.innerHTML = ''
     }
     else{
-        window.style = 'display : initial'
+        window.classList.remove('none')
         if (action == 'expand'){
             expanded[0].innerHTML = ` &boxbox; `
             expanded[1].innerHTML = ` &boxbox; `
-            window.style.width = '100%'
-            window.style.height = '100%'
+            window.classList.add('full')
             
         }
         if (action == 'shrink'){
             expanded[0].innerHTML = ` &EmptySmallSquare; `
             expanded[1].innerHTML = ` &EmptySmallSquare; `
             if ( window_init === 'file'){
-                window.style.width = '50rem'
-                window.style.height = '40rem'                
+                window.classList.remove('full')                
             }
             else{
                 window.style.width = '80%'
@@ -120,34 +119,131 @@ function windowHandler( window_init, action, display_state ) {
     }
 }
 
-let dark_mode = true // default color mode
+let dark_mode = true // default color mode - the default is dark mode
 
 function changeColorMode() {
     dark_mode = !dark_mode // reverse the boolean
-    let all_text_array = document.getElementsByTagName('h4')  // get all texts on page
-    let about_image = document.getElementById('image')
 
-    // set the color...dar for true and light for false
-    for (let index = 0; index < all_text_array.length; index++) {
-        all_text_array[index].className = dark_mode? 'secondary' : 'primary' //fucng love ternary
+    let about_image = document.getElementById('image'),
+        head_text = document.getElementsByClassName('heading')[0],
+        // An array of objects that describes CSS :root variables
+        array = [
+            {
+                name:'--b-w', // :root varable
+                dark:'#89d4ff', // dark mode value
+                light: 'white' // light mode value
+            }, 
+            {
+                name:' --wndow-panel',
+                dark:'white',
+                light: 'black'
+            },
+            {
+                name:'--wndow-panel-bg',
+                dark:'#111111',
+                light: '#e9e9e9'
+            },
+            {
+                name:'--web-jpeg-bg',
+                dark:'#1c1c1c',
+                light: '#28719b'
+            },
+            {
+                name:'--box-bg',
+                dark:'#373435',
+                light: '#f1f1f1'
+            },
+            {
+                name:'--box-bs',
+                dark:'black',
+                light: '#89d4ff'
+            },
+            {
+                name:'--wndows-bg',
+                dark:'#1c1c1c',
+                light: 'white'
+            },
+            {
+                name:'--h3_p',
+                dark:'#89d4ff',
+                light: '#28729c'
+            },
+            {
+                name:'--body',
+                dark:'white',
+                light:'#00629a'
+            },
+            {
+                name:'--border',
+                dark:'transparent',
+                light:'#0000ff5e'
+            }
+            
+        ]
+        
+        
+    for (let j = 0; j < array.length; j++) {
+        // indexing through all members of the array, change all default values accordng to boolean value of 'dark_mode' 
+        document.documentElement.style
+        .setProperty( array[j].name, dark_mode? array[j].dark : array[j].light )        
     }
+
+
+    // set head text
+    head_text.style = dark_mode? '' : 'color : #01a0e2' 
+
     // set body color
     document.body.style = dark_mode?
     ' background-color: black; background-image: url(./assets/left.png) ' 
     : 
-    ' background-color: white; background-image: url(./assets/left1.png) '
+    ' background-color: #0a4f77; background-image: url(./assets/left1.png) '
+
     // set about jpeg
     about_image.src = dark_mode? './assets/about-d.png' : './assets/about.png'
-
 }
-let color_toggle = document.getElementById('toggle')
+document.getElementById('toggle').addEventListener('click', changeColorMode) // add function to toggle
 
-color_toggle.addEventListener('click', changeColorMode)
+dragWindow(document.getElementById('about'))
+dragWindow(document.getElementById('file'))
 
+function dragWindow(element) {
+    let pos1 = 0
+    let pos2 = 0
+    let pos3 = 0
+    let pos4 = 0
 
-// function closure(){
-//     let count = 0;
-//     return ()=>console.log(count++);
-// }
+    if (document.getElementById(element + 'header')){
+        document.getElementById(element + 'header').onmousedown = dragMouseDown
+    }
+    else {
+        element.onmousedown = dragMouseDown
+    }
 
-// setInterval(closure(), 500);
+    function dragMouseDown(elem) {
+        elem = elem || window.event
+        elem.preventDefault()
+
+        pos3 = elem.clientX
+        pos4 = elem.clientY
+        document.onmouseup = closeDragElement
+        document.onmousemove = elementDrag
+    }
+
+    function elementDrag(elem) {
+        elem = elem || window.event
+        elem.preventDefault()
+        
+        pos1 = pos3 - elem.clientX
+        pos2 = pos4 - elem.clientY
+        pos3 = elem.clientX
+        pos4 = elem.clientY
+
+        element.style.top = (element.offsetTop -pos2) + 'px'
+        element.style.left = (element.offsetLeft -pos1) + 'px'
+    }
+    function closeDragElement() {
+        // stop move mouse
+        document.onmouseup = null        
+        document.onmousemove = null        
+    }
+}

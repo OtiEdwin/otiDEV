@@ -17,11 +17,11 @@
             <div class="folders absolute">
                 <div class="folder" onclick="windowHandler('about', '', true)">
                     <img id="image" src="./assets/about-d.png" class="folder-folder" alt="folder">
-                    <h4 class = "secondary" >About me</h4>        
+                    <h4 class = "b-w" >About me</h4>        
                 </div>
                 <div class="folder" onclick="windowHandler('file', '', true)">
                     <img src="./assets/folder.svg" class="folder-folder" alt="folder">
-                    <h4 class = "secondary" >My Projects</h4>        
+                    <h4 class = "b-w" >My Projects</h4>        
                 </div>            
             </div>
             <div class="head"></div>
@@ -37,14 +37,14 @@
                 </div>                
             </div>
             <div class="desktop absolute flex">
-                <p><span id="test" class="h3 primary">Hello World</span><span class="cursor h3 primary">_</span></p>                 
+                <div class="b-w" ><span id="test" class="h3">Hello World</span><span class="cursor h3">_</span></div>                 
             </div>            
         </section>
 
         <!-- ABOUT SECTION -->
 
-        <section id="about" class="about" style="display: none;">
-            <div class="window-panel">
+        <section id="about" class="about none">
+            <div id = "aboutheader" class="window-panel">
                 <div class="window-panel_sub">
                     <div class="path-box">About Me</div>
                 </div>
@@ -227,7 +227,7 @@
                 <div class="wrapper">
                     <div class="wrapper-button">
                         <div class="wrapper-icon">
-                            <i class="fab fa-facebook-f"></i> 
+                            <ion-icon name="logo-facebook"></ion-icon> 
                         </div>
                         <span>Facebook</span>
                     </div>
@@ -235,7 +235,7 @@
                 <div class="wrapper">
                     <div class="wrapper-button">
                         <div class="wrapper-icon">
-                            <i class="fab fa-twitter"></i> 
+                            <ion-icon name="logo-twitter"></ion-icon> 
                         </div>
                         <span>Twitter</span>
                     </div>
@@ -243,7 +243,7 @@
                 <div class="wrapper">
                     <div class="wrapper-button">
                         <div class="wrapper-icon">
-                            <i class="fab fa-github"></i> 
+                            <ion-icon name="logo-github"></ion-icon> 
                         </div>
                         <span>Github</span>
                     </div>
@@ -251,7 +251,7 @@
                 <div class="wrapper">
                     <div class="wrapper-button">
                         <div class="wrapper-icon">
-                            <i class="fab fa-linkedin"></i> 
+                            <ion-icon name="logo-linkedin"></ion-icon> 
                         </div>
                         <span>linkedin</span>
                     </div>
@@ -259,7 +259,7 @@
                 <div class="wrapper">
                     <div class="wrapper-button">
                         <div class="wrapper-icon">
-                            <i class="fab fa-whatsapp"></i> 
+                            <ion-icon name="logo-whatsapp"></ion-icon> 
                         </div>
                         <span>Whatsapp</span>
                     </div>
@@ -269,8 +269,8 @@
 
         <!-- PROJECTS SECTION -->
 
-        <section id="file" class="window" style="display: none;">
-            <div class="window-panel">
+        <section id="file" class="window none">
+            <div id = "fileheader" class="window-panel">
                 <div class="window-panel_sub">
                     <div class="path-box">Projects : </div>
                     <div id="path">
