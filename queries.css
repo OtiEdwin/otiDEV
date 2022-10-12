@@ -1,0 +1,31 @@
+/* MEDIA QUERIES */
+
+@media (max-width:1300px) {
+    .l1 {left: 20%;}
+}
+@media (max-width:1200px) {
+    .l1 {left: 17%;}
+}
+@media (max-width:1100px) {
+    .background-img{width: 30rem;}
+    .c1 img{ width:15rem}
+    .l1,.r1{display: none;}
+}
+
+
+@media (max-width:500px) {
+    section{height: 98%;}
+    .b1, .c1{display: none;}
+    .desktop{display: none;}
+    .head{width: 8rem; height: 8rem;}
+    #signature{
+        left: 50% !important;
+        transform: translate(-50%,  -0%);
+    }
+    .first-1 {
+        bottom: 50%;
+        right: 50%;
+        transform: translate(50%, 50%);
+    }
+    
+}
