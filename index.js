@@ -94,11 +94,11 @@ function windowHandler( window_init, action, display_state ) {
         expanded = document.getElementsByClassName("expanded")
 
     if (display_state == false){
-        window.classList.add('none') = ''
+        window.classList.add('none')
         path.innerHTML = ''
     }
     else{
-        window.classList.remove('none')
+        window.classList.remove ('none')
         if (action == 'expand'){
             expanded[0].innerHTML = ` &boxbox; `
             expanded[1].innerHTML = ` &boxbox; `
@@ -121,6 +121,8 @@ function windowHandler( window_init, action, display_state ) {
 
 let dark_mode = true // default color mode - the default is dark mode
 
+
+// MY 1MPLEMENTAT1ON OF COLOR CHANGE MODE
 function changeColorMode() {
     dark_mode = !dark_mode // reverse the boolean
 
@@ -201,7 +203,17 @@ function changeColorMode() {
     // set about jpeg
     about_image.src = dark_mode? './assets/about-d.png' : './assets/about.png'
 }
-document.getElementById('toggle').addEventListener('click', changeColorMode) // add function to toggle
+
+// A MORE STANDARD 1MPLEMENTAT1ON OF COLOR CHANGE MODE
+let dark_modeQuery = window.matchMedia('(prefers-color-scheme: dark)')
+    dark_modeQuery.addListener((e) => {
+        let toggler = document.getElementById('switch')
+        toggler.checked = !toggler.checked      
+        console.log(toggler.checked) 
+    })
+
+
+document.getElementById('toggle').addEventListener('click', changeColorMode) 
 
 dragWindow(document.getElementById('about'))
 dragWindow(document.getElementById('file'))

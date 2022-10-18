@@ -6,8 +6,6 @@
     /* border: 1px solid blue; */
 }
 body{
-    background-color: black;
-    background-image: url(./assets/left.png);
     color: var(--body);
     background-size: cover;
     overflow: hidden;
@@ -30,21 +28,6 @@ body{
     --primary-color: #28729c;
     --secondary-color: #89d4ff;
     --tertiary-color: #373435;
-
-    /* dynamic colors */
-
-    --b-w: #89d4ff;
-    --wndow-panel: white; 
-    --wndow-panel-bg: #111111;
-    --web-jpeg-bg: #1c1c1c;
-    --box-bg: #373435;
-    --box-bs: black;
-    --wndows-bg: #1c1c1c;
-    --h3_p: #89d4ff;
-    --body: white;
-    --border: transparent;
-
-    /* social media colors */
 
     --facebook:#3b5998;
     --twitter:#1da1f2;
@@ -107,6 +90,7 @@ p{
 }
 .flex{
     display: flex;
+    flex-wrap: wrap;
 }
 .row{
     display: flex;
@@ -228,7 +212,7 @@ color: var(--b-w)
 .head{
     height: 8rem;
     width: 8rem;
-    background-image: url(./assets/head.svg);
+    background-image: url(../assets/head.svg);
     background-position: center;
     background-size: contain;
     position: absolute;
@@ -237,7 +221,7 @@ color: var(--b-w)
     transition: all .5s;
 }
 .head:hover{
-    background-image: url(./assets/smileyhead.svg);
+    background-image: url(../assets/smileyhead.svg);
 }
 .switch{
     bottom: 1%;
@@ -401,7 +385,7 @@ color: var(--b-w)
     border-radius: 5px
 }
 .card-image{
-    background-image: url(./assets/me.jpg);
+    background-image: url(../assets/me.jpg);
     height: 15rem;
     width: 15rem;
     border-radius: 100%;
@@ -410,7 +394,7 @@ color: var(--b-w)
     margin: 1rem;
 }
 .card-text{
-    height: 15rem;
+    /* height: 15rem; */
     margin: 1rem;
     display: flex;
     flex-direction: column;
@@ -468,7 +452,7 @@ color: var(--b-w)
     transition: all .3s;
 }
 .web-card{
-    height: 20rem;
+    /* min-height: 20rem; */
     position: relative;
     margin: 1rem 0;
     width: 100%;
@@ -483,6 +467,14 @@ color: var(--b-w)
 .web-icon{
     margin: auto 2.5rem;
     width: 15rem;
+}
+.web-icon img{
+    width: 100%;
+    transition: all .3s;
+    background-color: var(--web-jpeg-bg);
+    box-shadow: 15px 15px #89d4ff4f;
+    padding: 2rem;
+    margin: 3rem 0;
 }
 .gallery{
     width: 100%;
@@ -510,13 +502,7 @@ color: var(--b-w)
     margin: auto 0;
     margin-right: auto;
 }
-.web-icon img{
-    width: 100%;
-    transition: all .3s;
-    background-color: var(--web-jpeg-bg);
-    box-shadow: 15px 15px #89d4ff4f;
-    padding: 2rem;
-}
+
 .checkout{
     text-decoration: none;
     width: fit-content;

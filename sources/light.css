@@ -1,0 +1,18 @@
+:root{
+    /* dynamic colors */
+
+    --b-w: white;
+    --wndow-panel: black;
+    --wndow-panel-bg: #e9e9e9;
+    --web-jpeg-bg: #28719b;
+    --box-bg: #f1f1f1;
+    --box-bs: #89d4ff;
+    --wndows-bg: white;
+    --h3_p: #28729c;
+    --body: #00629a;
+    --border: #0000ff5e;
+}
+body{
+    background-color: #0a4f77;
+    background-image: url(../assets/left1.png);
+}  

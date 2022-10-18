@@ -1,0 +1,16 @@
+:root{
+    --b-w: #89d4ff;
+    --wndow-panel: white; 
+    --wndow-panel-bg: #111111;
+    --web-jpeg-bg: #1c1c1c;
+    --box-bg: #373435;
+    --box-bs: black;
+    --wndows-bg: #1c1c1c;
+    --h3_p: #89d4ff;
+    --body: white;
+    --border: transparent;
+}
+body{
+    background-color: black;
+    background-image: url(../assets/left.png);
+} 

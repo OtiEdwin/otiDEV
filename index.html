@@ -7,12 +7,24 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comfortaa:wght@300;400;500;600;700&family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&family=PT+Mono&display=swap" rel="stylesheet">
+        <script>
+            if (window.matchMedia('(prefers-color-scheme: dark)').media === 'not all') {
+                document.documentElement.style.display = 'none'
+                document.head.insertAdjacentHTML(
+                    'beforeend', 
+                    '<link rel="stylesheet" href="./sources/dark.css" onload = " document.documentElement.style.display = \'\' ">'
+                    )
+            }
+        </script>        
+        <link rel="stylesheet" href="./sources/light.css" media="(prefers-color-scheme: light)">
+        <link rel="stylesheet" href="./sources/dark.css" media="(prefers-color-scheme: dark)">
         <link rel="stylesheet" href="./sources/index.css">
         <link rel="stylesheet" href="./sources/keyframes.css">
-        <link rel="stylesheet" href="./sources/queries.css">
+        <link rel="stylesheet" href="./sources/queries.css">        
         <title>My desktop</title>
     </head>
     <body>
+
         <!-- MAIN BODY -->
 
         <section class="main relative">
@@ -116,7 +128,7 @@
             </div>
             <h3 class="secondary tl ml-half">My Websites</h3><br>
             <div class="stack flex col wrap se">
-                <div class="web-card">
+                <div class="web-card flex">
                     <div class="web-icon ratio-4">
                         <img src="./assets/spry.png" alt="React" class="center">
                         <div class="absolute holobox"></div>
@@ -135,7 +147,7 @@
                     </div>
                 </div>
 
-                <div class="web-card">
+                <div class="web-card flex">
                     <div class="web-icon ratio-4">
                         <img src="./assets/CBYM.png" alt="Next" class="center">
                         <div class="absolute holobox"></div>
