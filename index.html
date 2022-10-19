@@ -7,7 +7,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comfortaa:wght@300;400;500;600;700&family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&family=PT+Mono&display=swap" rel="stylesheet">
-        <script>
+        <!-- <script>
             if (window.matchMedia('(prefers-color-scheme: dark)').media === 'not all') {
                 document.documentElement.style.display = 'none'
                 document.head.insertAdjacentHTML(
@@ -15,7 +15,7 @@
                     '<link rel="stylesheet" href="./sources/dark.css" onload = " document.documentElement.style.display = \'\' ">'
                     )
             }
-        </script>        
+        </script>         -->
         <link rel="stylesheet" href="./sources/light.css" media="(prefers-color-scheme: light)">
         <link rel="stylesheet" href="./sources/dark.css" media="(prefers-color-scheme: dark)">
         <link rel="stylesheet" href="./sources/index.css">
@@ -24,7 +24,6 @@
         <title>My desktop</title>
     </head>
     <body>
-
         <!-- MAIN BODY -->
 
         <section class="main relative">
@@ -68,217 +67,220 @@
                     <div class="panel-box close" style="font-size: 2rem;" onclick = "windowHandler('about', '', false)">&times;</div>
                 </div>
             </div>
-            <div class="card flex row">
-                <div class="card-image">
-                    <div class="card-image_description"></div>
-                </div>
-                <div class="card-text">
-                    <h1 class="heading">
-                        Otonye Hillary Edwin
-                        <lord-icon
-                        src="https://cdn.lordicon.com/crrnydsb.json"
-                        trigger="hover"
-                        colors="primary:#ffffff"
-                        style="width:35px;height:35px">
-                        </lord-icon>
-                    </h1>
+            <div class="scroll">
+                <div class="card flex row">
+                    <div class="card-image">
+                        <div class="card-image_description"></div>
+                    </div>
+                    <div class="card-text">
+                        <h1 class="heading">
+                            Otonye Hillary Edwin
+                            <lord-icon
+                            src="https://cdn.lordicon.com/crrnydsb.json"
+                            trigger="hover"
+                            colors="primary:#ffffff"
+                            style="width:35px;height:35px">
+                            </lord-icon>
+                        </h1>
 
-                    <h3 class="heading-sub">Web developer/Graphics designer &mdash; full stack</h3>
-                    <p class="about-text">
-                        Front-end web developer || A studying Illustrator || Graphics designer
-                    </p>
-                    <a href="/" class="checkout"> My GitHub &rarr;</a>
-                </div>
-                
-            </div>
-            <h3 class="secondary tl ml-half">My stack</h3><br>
-            <div class="stack flex row wrap se">
-                <div class="stack-card react">
-                    <div class="stack-icon">
-                        <img src="./assets/reaxt.png" alt="React">
-                    </div>
-                    <div class="stack-description">
-                        <h4 class = "secondary" >React JS</h4>
-                    </div>
-                </div>
-                <div class="stack-card next">
-                    <div class="stack-icon">
-                        <img src="./assets/next.png" alt="Next">
-                    </div>
-                    <div class="stack-description">
-                        <h4 class = "secondary" >Next JS</h4>
-                    </div>
-                </div>
-                <div class="stack-card node">
-                    <div class="stack-icon">
-                        <img src="./assets/node.png" alt="">
-                    </div>
-                    <div class="stack-description">
-                        <h4 class = "secondary" >Node JS</h4>
-                    </div>
-                </div>
-                <div class="stack-card mongo">
-                    <div class="stack-icon">
-                        <img src="./assets/mongo.png" alt="">
-                    </div>
-                    <div class="stack-description">
-                        <h4 class = "secondary" >MongoDB</h4>
-                    </div>
-                </div>
-            </div>
-            <h3 class="secondary tl ml-half">My Websites</h3><br>
-            <div class="stack flex col wrap se">
-                <div class="web-card flex">
-                    <div class="web-icon ratio-4">
-                        <img src="./assets/spry.png" alt="React" class="center">
-                        <div class="absolute holobox"></div>
-                    </div>
-                    <div class="web-description ratio-6 col">
-                        <div class="flex">
-                            <h3>Spry Anonymous</h3>
-                            <span class="material-symbols-outlined" style="margin: auto 1rem; padding-bottom: .2rem; color: #89d4ff;">
-                                public                                
-                            </span>                            
-                        </div><br>
-                        <p>
-                            A fun social experiment &mdash; Share you thoughts with your friends anonymously. They'll never know it's you.
+                        <h3 class="heading-sub">Web developer/Graphics designer &mdash; full stack</h3>
+                        <p class="about-text">
+                            Front-end web developer || A studying Illustrator || Graphics designer
                         </p>
-                        <a href="/" class="checkout">Visit &rarr;</a>
+                        <a href="/" class="checkout"> My GitHub &rarr;</a>
+                    </div>
+                    
+                </div>
+                <h3 class="secondary tl ml-half">My stack</h3><br>
+                <div class="stack flex row wrap se">
+                    <div class="stack-card react">
+                        <div class="stack-icon">
+                            <img src="./assets/reaxt.png" alt="React">
+                        </div>
+                        <div class="stack-description">
+                            <h4 class = "secondary" >React JS</h4>
+                        </div>
+                    </div>
+                    <div class="stack-card next">
+                        <div class="stack-icon">
+                            <img src="./assets/next.png" alt="Next">
+                        </div>
+                        <div class="stack-description">
+                            <h4 class = "secondary" >Next JS</h4>
+                        </div>
+                    </div>
+                    <div class="stack-card node">
+                        <div class="stack-icon">
+                            <img src="./assets/node.png" alt="">
+                        </div>
+                        <div class="stack-description">
+                            <h4 class = "secondary" >Node JS</h4>
+                        </div>
+                    </div>
+                    <div class="stack-card mongo">
+                        <div class="stack-icon">
+                            <img src="./assets/mongo.png" alt="">
+                        </div>
+                        <div class="stack-description">
+                            <h4 class = "secondary" >MongoDB</h4>
+                        </div>
                     </div>
                 </div>
+                <h3 class="secondary tl ml-half">My Websites</h3><br>
+                <div class="stack flex col wrap se">
+                    <div class="web-card flex">
+                        <div class="web-icon ratio-4">
+                            <img src="./assets/spry.png" alt="React" class="center">
+                            <div class="absolute holobox"></div>
+                        </div>
+                        <div class="web-description ratio-6 col">
+                            <div class="flex">
+                                <h3>Spry Anonymous</h3>
+                                <span class="material-symbols-outlined" style="margin: auto 1rem; padding-bottom: .2rem; color: #89d4ff;">
+                                    public                                
+                                </span>                            
+                            </div><br>
+                            <p>
+                                A fun social experiment &mdash; Share you thoughts with your friends anonymously. They'll never know it's you.
+                            </p>
+                            <a href="/" class="checkout">Visit &rarr;</a>
+                        </div>
+                    </div>
 
-                <div class="web-card flex">
-                    <div class="web-icon ratio-4">
-                        <img src="./assets/CBYM.png" alt="Next" class="center">
-                        <div class="absolute holobox"></div>
+                    <div class="web-card flex">
+                        <div class="web-icon ratio-4">
+                            <img src="./assets/CBYM.png" alt="Next" class="center">
+                            <div class="absolute holobox"></div>
+                        </div>
+                        <div class="web-description ratio-6 col">
+                            <div class="flex">
+                                <h3>CBYM</h3> 
+                                <span class="material-symbols-outlined" style="margin: auto 1rem; padding-bottom: .2rem; color: #89d4ff;">
+                                    public                                
+                                </span>
+                            </div><br>
+                            <p>
+                                A news Website &mdash; Share you thoughts with your friends anonymously. They'll never know it's you.
+                            </p>
+                            <a href="/" class="checkout">Visit &rarr;</a>
+                        </div>
                     </div>
-                    <div class="web-description ratio-6 col">
-                        <div class="flex">
-                            <h3>CBYM</h3> 
-                            <span class="material-symbols-outlined" style="margin: auto 1rem; padding-bottom: .2rem; color: #89d4ff;">
-                                public                                
-                            </span>
-                        </div><br>
-                        <p>
-                            A news Website &mdash; Share you thoughts with your friends anonymously. They'll never know it's you.
-                        </p>
-                        <a href="/" class="checkout">Visit &rarr;</a>
+                </div>
+                <h3 class="secondary tl ml-half">My Design Gallery</h3><br>
+                <div class="stack flex col wrap se">
+                    <div class="">
+                        <div class="gallery">
+                            <div class="gallery-img relative">
+                                <img src="./assets/img1.jpg" alt="Next" class="center">
+                                <div class="box absolute">
+                                    <img src="./assets/visit.png" alt="">
+                                    <div class="border">
+                                        <a href="/">Visit &rarr;</a>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="gallery-img relative">
+                                <img src="./assets/img2.jpg" alt="Next" class="center">
+                                <div class="box absolute">
+                                    <img src="./assets/visit.png" alt="">
+                                    <div class="border">
+                                        <a href="/">Visit &rarr;</a>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="gallery-img relative">
+                                <img src="./assets/img3.jpg" alt="Next" class="center">
+                                <div class="box absolute">
+                                    <img src="./assets/visit.png" alt="">
+                                    <div class="border">
+                                        <a href="/">Visit &rarr;</a>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="gallery-img relative">
+                                <img src="./assets/img4.jpg" alt="Next" class="center">
+                                <div class="box absolute">
+                                    <img src="./assets/visit.png" alt="">
+                                    <div class="border">
+                                        <a href="/">Visit &rarr;</a>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="gallery-img relative">
+                                <img src="./assets/img5.jpg" alt="Next" class="center">
+                                <div class="box absolute">
+                                    <img src="./assets/visit.png" alt="">
+                                    <div class="border">
+                                        <a href="/">Visit &rarr;</a>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="gallery-img relative">
+                                <img src="./assets/img6.jpg" alt="Next" class="center">
+                                <div class="box absolute">
+                                    <img src="./assets/visit.png" alt="">
+                                    <div class="border">
+                                        <a href="/">Visit &rarr;</a>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="gallery-img relative">
+                                <img src="./assets/img7.jpg" alt="Next" class="center">
+                                <div class="box absolute">
+                                    <img src="./assets/visit.png" alt="">
+                                    <div class="border">
+                                        <a href="/">Visit &rarr;</a>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <h3 class="secondary tl ml-half">Contact Me</h3><br>
+                <div class="socials">
+                    <div class="wrapper">
+                        <div class="wrapper-button">
+                            <div class="wrapper-icon">
+                                <ion-icon name="logo-facebook"></ion-icon> 
+                            </div>
+                            <span>Facebook</span>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="wrapper-button">
+                            <div class="wrapper-icon">
+                                <ion-icon name="logo-twitter"></ion-icon> 
+                            </div>
+                            <span>Twitter</span>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="wrapper-button">
+                            <div class="wrapper-icon">
+                                <ion-icon name="logo-github"></ion-icon> 
+                            </div>
+                            <span>Github</span>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="wrapper-button">
+                            <div class="wrapper-icon">
+                                <ion-icon name="logo-linkedin"></ion-icon> 
+                            </div>
+                            <span>linkedin</span>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="wrapper-button">
+                            <div class="wrapper-icon">
+                                <ion-icon name="logo-whatsapp"></ion-icon> 
+                            </div>
+                            <span>Whatsapp</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <h3 class="secondary tl ml-half">My Design Gallery</h3><br>
-            <div class="stack flex col wrap se">
-                <div class="">
-                    <div class="gallery">
-                        <div class="gallery-img relative">
-                            <img src="./assets/img1.jpg" alt="Next" class="center">
-                            <div class="box absolute">
-                                <img src="./assets/visit.png" alt="">
-                                <div class="border">
-                                    <a href="/">Visit &rarr;</a>
-                                </div> 
-                            </div>
-                        </div>
-                        <div class="gallery-img relative">
-                            <img src="./assets/img2.jpg" alt="Next" class="center">
-                            <div class="box absolute">
-                                <img src="./assets/visit.png" alt="">
-                                <div class="border">
-                                    <a href="/">Visit &rarr;</a>
-                                </div> 
-                            </div>
-                        </div>
-                        <div class="gallery-img relative">
-                            <img src="./assets/img3.jpg" alt="Next" class="center">
-                            <div class="box absolute">
-                                <img src="./assets/visit.png" alt="">
-                                <div class="border">
-                                    <a href="/">Visit &rarr;</a>
-                                </div> 
-                            </div>
-                        </div>
-                        <div class="gallery-img relative">
-                            <img src="./assets/img4.jpg" alt="Next" class="center">
-                            <div class="box absolute">
-                                <img src="./assets/visit.png" alt="">
-                                <div class="border">
-                                    <a href="/">Visit &rarr;</a>
-                                </div> 
-                            </div>
-                        </div>
-                        <div class="gallery-img relative">
-                            <img src="./assets/img5.jpg" alt="Next" class="center">
-                            <div class="box absolute">
-                                <img src="./assets/visit.png" alt="">
-                                <div class="border">
-                                    <a href="/">Visit &rarr;</a>
-                                </div> 
-                            </div>
-                        </div>
-                        <div class="gallery-img relative">
-                            <img src="./assets/img6.jpg" alt="Next" class="center">
-                            <div class="box absolute">
-                                <img src="./assets/visit.png" alt="">
-                                <div class="border">
-                                    <a href="/">Visit &rarr;</a>
-                                </div> 
-                            </div>
-                        </div>
-                        <div class="gallery-img relative">
-                            <img src="./assets/img7.jpg" alt="Next" class="center">
-                            <div class="box absolute">
-                                <img src="./assets/visit.png" alt="">
-                                <div class="border">
-                                    <a href="/">Visit &rarr;</a>
-                                </div> 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> 
-            <h3 class="secondary tl ml-half">Contact Me</h3><br>
-            <div class="socials">
-                <div class="wrapper">
-                    <div class="wrapper-button">
-                        <div class="wrapper-icon">
-                            <ion-icon name="logo-facebook"></ion-icon> 
-                        </div>
-                        <span>Facebook</span>
-                    </div>
-                </div>
-                <div class="wrapper">
-                    <div class="wrapper-button">
-                        <div class="wrapper-icon">
-                            <ion-icon name="logo-twitter"></ion-icon> 
-                        </div>
-                        <span>Twitter</span>
-                    </div>
-                </div>
-                <div class="wrapper">
-                    <div class="wrapper-button">
-                        <div class="wrapper-icon">
-                            <ion-icon name="logo-github"></ion-icon> 
-                        </div>
-                        <span>Github</span>
-                    </div>
-                </div>
-                <div class="wrapper">
-                    <div class="wrapper-button">
-                        <div class="wrapper-icon">
-                            <ion-icon name="logo-linkedin"></ion-icon> 
-                        </div>
-                        <span>linkedin</span>
-                    </div>
-                </div>
-                <div class="wrapper">
-                    <div class="wrapper-button">
-                        <div class="wrapper-icon">
-                            <ion-icon name="logo-whatsapp"></ion-icon> 
-                        </div>
-                        <span>Whatsapp</span>
-                    </div>
-                </div>
-            </div>
+
         </section>
 
         <!-- PROJECTS SECTION -->

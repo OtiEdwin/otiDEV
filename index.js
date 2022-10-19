@@ -119,13 +119,15 @@ function windowHandler( window_init, action, display_state ) {
     }
 }
 
-let dark_mode = true // default color mode - the default is dark mode
+let dark_mode = window.matchMedia('(prefers-color-scheme: dark)').matches // default color mode - the default is dark mode
+let toggler = document.getElementById('switch')
+    toggler.checked = !window.matchMedia('(prefers-color-scheme: dark)').matches
 
 
 // MY 1MPLEMENTAT1ON OF COLOR CHANGE MODE
 function changeColorMode() {
     dark_mode = !dark_mode // reverse the boolean
-
+    
     let about_image = document.getElementById('image'),
         head_text = document.getElementsByClassName('heading')[0],
         // An array of objects that describes CSS :root variables
@@ -182,14 +184,12 @@ function changeColorMode() {
             }
             
         ]
-        
-        
+                
     for (let j = 0; j < array.length; j++) {
         // indexing through all members of the array, change all default values accordng to boolean value of 'dark_mode' 
         document.documentElement.style
         .setProperty( array[j].name, dark_mode? array[j].dark : array[j].light )        
     }
-
 
     // set head text
     head_text.style = dark_mode? '' : 'color : #01a0e2' 
@@ -200,14 +200,14 @@ function changeColorMode() {
     : 
     ' background-color: #0a4f77; background-image: url(./assets/left1.png) '
 
-    // set about jpeg
-    about_image.src = dark_mode? './assets/about-d.png' : './assets/about.png'
+    // set about icon
+    about_image.src = dark_mode? './assets/about.png' : './assets/about-d.png'
 }
 
-// A MORE STANDARD 1MPLEMENTAT1ON OF COLOR CHANGE MODE
+// AN 1MPLEMENTAT1ON OF COLOR CHANGE MODE USING SYSTEM DEFAULT
 let dark_modeQuery = window.matchMedia('(prefers-color-scheme: dark)')
-    dark_modeQuery.addListener((e) => {
-        let toggler = document.getElementById('switch')
+    dark_modeQuery.addListener((e
+        ) => {
         toggler.checked = !toggler.checked      
         console.log(toggler.checked) 
     })
@@ -218,6 +218,7 @@ document.getElementById('toggle').addEventListener('click', changeColorMode)
 dragWindow(document.getElementById('about'))
 dragWindow(document.getElementById('file'))
 
+    // TODO - first todo
 function dragWindow(element) {
     let pos1 = 0
     let pos2 = 0

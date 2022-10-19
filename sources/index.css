@@ -29,6 +29,8 @@ body{
     --secondary-color: #89d4ff;
     --tertiary-color: #373435;
 
+    /* socal meda colors */
+
     --facebook:#3b5998;
     --twitter:#1da1f2;
     --linkedin:#4078c0;
@@ -36,13 +38,13 @@ body{
     --whatsapp:#128c7e;
 }
 
-body::-webkit-scrollbar, .about::-webkit-scrollbar{
+body::-webkit-scrollbar, .scroll::-webkit-scrollbar{
     width: .5rem;
     position: absolute;
     border: 1px solid #d4d4d400;
     background: #d5d5d500;
 }
-body::-webkit-scrollbar-thumb, .about::-webkit-scrollbar-thumb{
+body::-webkit-scrollbar-thumb, .scroll::-webkit-scrollbar-thumb{
     background-color: var(--primary-color);
     border-radius: 100px;
     padding-left: 5px;
@@ -373,8 +375,12 @@ color: var(--b-w)
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: var(--wndows-bg);
-    overflow-y: scroll;
+    overflow-y: hidden;
     font-family: 'Comfortaa', cursive;
+}
+.scroll{
+    overflow-y: scroll;
+    height: 100%;
 }
 .card{
     background-color: var(--box-bg);
