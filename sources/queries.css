@@ -41,9 +41,8 @@
     .l1,.r1{display: none;}
 }
 
-
 @media (max-width:500px) {
-    section{height: 98%;}
+    section{height: 98%; margin: 0;}
     .b1, .c1{display: none;}
     .desktop{display: none;}
     .head{width: 8rem; height: 8rem;}
@@ -55,6 +54,10 @@
         bottom: 50%;
         right: 50%;
         transform: translate(50%, 50%);
+    }
+    .window, .about{
+        width: 100%;
+        height: 100%;
     }
     
 }

@@ -8,11 +8,11 @@
 body{
     color: var(--body);
     background-size: cover;
+    background-repeat: no-repeat;
     overflow: hidden;
     font-family: 'Comfortaa',  'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     display: flex;
     flex-direction: column;
-    height: 100%;
     justify-content: space-between;
 
     user-select:none;
@@ -285,10 +285,10 @@ color: var(--b-w)
 }
 
 .window{
-    height: 40rem;
+    height: 35rem;
     background-color: var(--wndows-bg);
     box-shadow: 0.1px 0.1px 1.5px #484848;
-    width: 50rem;
+    width: 50%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -296,7 +296,7 @@ color: var(--b-w)
 }
 .window-panel{
     width: 100%;
-    height: 5%;
+    height: auto;
     display: flex;
     background-color: var(--wndow-panel-bg);
     color:  var(--wndow-panel);
@@ -607,7 +607,6 @@ color: var(--b-w)
 .circle_box-250{
     height: 15rem;
     width: 250rem;
-    overflow: visible;
     z-index: -2;
 }
 .circle_box-50{
