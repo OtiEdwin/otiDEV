@@ -40,6 +40,11 @@
     .c1 img{ width:15rem}
     .l1,.r1{display: none;}
 }
+@media (max-width:890px) {
+    .web-description{
+        margin-right: 0;
+    }
+}
 
 @media (max-width:500px) {
     section{height: 98%; margin: 0;}

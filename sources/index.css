@@ -288,6 +288,7 @@ color: var(--b-w)
     height: 35rem;
     background-color: var(--wndows-bg);
     box-shadow: 0.1px 0.1px 1.5px #484848;
+    border-radius: 7px;
     width: 50%;
     position: absolute;
     top: 50%;
@@ -298,6 +299,7 @@ color: var(--b-w)
     width: 100%;
     height: auto;
     display: flex;
+    border-radius: 7px 7px 0 0;
     background-color: var(--wndow-panel-bg);
     color:  var(--wndow-panel);
     justify-content: space-between;
@@ -338,16 +340,19 @@ color: var(--b-w)
 .close:hover{
     background-color: #d61414;
     color: white;
+    border-radius: 0 5px 0 0;
 }
 
 .main-content{
     height: 95%;
     display: flex;
+    border-radius: 7px;
     justify-content: flex-start;
 }
 .main-content_nav{
     width: 20%;
     background-color: var(--wndows-bg);
+    border-radius: 0px 0px 0px 7px;
     height: 100%;
     border: 0.1px solid #28729c30;
 }
@@ -364,6 +369,7 @@ color: var(--b-w)
     width: 80%;
     background-color: var(--wndows-bg);
     height: 100%;
+    border-radius: 0px 0px 7px 0px;
     border: 0.1px solid #28729c30;
 }
 .about{
@@ -373,6 +379,7 @@ color: var(--b-w)
     box-shadow: 0.1px 0.1px 1.5px #484848;
     top: 50%;
     left: 50%;
+    border-radius: 7px;
     transform: translate(-50%, -50%);
     background-color: var(--wndows-bg);
     overflow-y: hidden;
@@ -461,6 +468,7 @@ color: var(--b-w)
     /* min-height: 20rem; */
     position: relative;
     margin: 1rem 0;
+    padding: 2rem;
     width: 100%;
     background-color: var(--box-bg);
     box-shadow: 5px 5px var(--box-bs);
@@ -471,7 +479,7 @@ color: var(--b-w)
     transition: all .3s;
 }
 .web-icon{
-    margin: auto 2.5rem;
+    margin: auto 5rem;
     width: 15rem;
 }
 .web-icon img{
