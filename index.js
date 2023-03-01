@@ -2,7 +2,7 @@ let test = document.getElementById('test'),
     text = test.innerText,
     text1 = `Hello World`, 
     text2 = `My name is Otonye Edwin`,
-    text3 = `I'm a full-stack Web Developer`,
+    text3 = `I'm a frontend Web Developer`,
     text4 = `Welcome to my Desktop`,        
     text5 = `Check out all my Projects`
 
@@ -41,7 +41,6 @@ function Path( trace, coordinates, location ) {
         if( i < b.length ){
             let div = document.createElement('div')
             div.className = "path-box"
-            // div.onClick = "contentChange('location[base][ b[i] ]', d0, [])"
             let inner = document.createTextNode( `${location[base][ b[i] ]} ||`)
             div.appendChild(inner)
             path.appendChild(div)
