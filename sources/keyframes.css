@@ -166,3 +166,25 @@
         transform:translateX(0rem)
     }
 }
+@keyframes slide_small{
+    30%{
+        transform:translateX(0rem)
+    }
+    35%{
+        transform:translateX(-26rem)
+    }
+
+    60%{
+        transform:translateX(-26rem)
+    }
+    65%{
+        transform:translateX(-52rem)
+    }
+
+    90%{
+        transform:translateX(-52rem)
+    }
+    95%{
+        transform:translateX(0rem)
+    }
+}

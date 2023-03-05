@@ -181,7 +181,7 @@ function changeColorMode() {
                 dark:'transparent',
                 light:'#0000ff5e'
             }
-            
+          
         ]
                 
     for (let j = 0; j < array.length; j++) {
