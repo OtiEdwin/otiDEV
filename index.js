@@ -30,6 +30,7 @@ function changeText(){
     if(document.hidden){clearInterval(interval_id); j--}
     i = 0; j++
 }
+
 setInterval( changeText, 9000 );
 
 // TO CHANGE THE PATH DISPLAY
