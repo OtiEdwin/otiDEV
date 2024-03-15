@@ -1,8 +1,8 @@
 let test = document.getElementById('test'),
     text = test.innerText,
     text1 = `Hello World`, 
-    text2 = `My name is Otonye Edwin`,
-    text3 = `I'm a frontend Web Developer`,
+    text2 = `My name is Otonye Hillary`,
+    text3 = `I'm a Software Developer`,
     text4 = `Welcome to my Desktop`,        
     text5 = `Check out all my Projects`
 
